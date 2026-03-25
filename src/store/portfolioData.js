@@ -84,74 +84,9 @@ export const portfolioData = {
   },
 
   projects: [
+    
     {
-      id: 1,
-      title: "Hotel Management System",
-      description: "Full‑stack application for managing rooms, bookings, customers, and payments with operational dashboards and billing workflows.",
-      image: "/projects/hotel-management.png",
-      tags: ["Node.js", "Express.js", "React.js", "PostgreSQL"],
-      links: {
-        github: "#",
-        live: "#"
-      }
-    },
-    {
-      id: 2,
-      title: "SmartPool System",
-      description: "IoT-integrated monitoring system tracking pool conditions, usage statistics, and maintenance alerts to improve safety and efficiency.",
-      image: "/projects/smartpool.png",
-      tags: ["JavaScript", "Node.js", "IoT", "PostgreSQL"],
-      links: {
-        github: "#",
-        live: "#"
-      }
-    },
-    {
-      id: 3,
-      title: "M‑Pesa Billing Integration",
-      description: "Backend service handling M‑Pesa payment requests and confirmations, updating billing records in real time via REST APIs.",
-      image: "/projects/mpesa.png",
-      tags: ["Node.js", "REST API", "Payment Gateway"],
-      links: {
-        github: "#",
-        live: "#"
-      }
-    },
-    {
-      id: 4,
-      title: "E‑Commerce Website",
-      description: "Online store UI with cart and payment flow, responsive layout and accessible components.",
-      image: "/projects/ecommerce.PNG",
-      tags: ["HTML", "CSS", "JavaScript"],
-      links: {
-        github: "https://github.com/skipper-blue/skipperglitch",
-        live: "https://skipperglitch.alwaysdata.net/"
-      }
-    },
-    {
-      id: 5,
-      title: "Portfolio Website",
-      description: "Personal portfolio showcasing projects, blog and contact form with smooth animations.",
-      image: "/projects/portifolio.PNG",
-      tags: ["HTML", "CSS", "Bootstrap"],
-      links: {
-        github: "https://github.com/",
-        live: "https://skipper-blue.github.io/my-portifolio/"
-      }
-    },
-    {
-      id: 6,
-      title: "Weather App",
-      description: "Realtime weather dashboard with API integration and charted data.",
-      image: "/projects/weather.jpeg",
-      tags: ["HTML", "CSS", "API"],
-      links: {
-        github: "https://github.com/",
-        live: "#"
-      }
-    },
-    {
-      id:7,
+      id:1,
       title:"Hospital website",
       description:"A hospital website with a user-friendly interface, providing information about services, doctors, and appointment scheduling.",
       image:"/projects/mhudumist.png",
@@ -209,7 +144,7 @@ export const portfolioData = {
 
   content: {
     navbar: {
-      brand: "Skipper",
+      brand: "Rabin",
       links: [
         { id: 'home', icon: 'bi bi-house', label: 'Home', href: '#home' },
         { id: 'about', icon: 'bi bi-person', label: 'About', href: '#about' },
