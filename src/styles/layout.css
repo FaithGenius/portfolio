@@ -1,0 +1,33 @@
+/* Navbar Styles - Main Content Offset */
+.main-content {
+  padding-top: calc(var(--nav-height) + 40px);
+  background: var(--bg-0);
+}
+
+/* Section Spacing */
+section {
+  scroll-margin-top: var(--nav-height);
+}
+
+/* Hero section specific */
+section.hero {
+  margin-top: -40px; /* Overlap with nav */
+  padding-top: 6rem;
+}
+
+/* Responsive main content padding */
+@media (max-width: 900px) {
+  .main-content {
+    padding-top: calc(var(--nav-height) + 30px);
+  }
+}
+
+@media (max-width: 640px) {
+  .main-content {
+    padding-top: calc(var(--nav-height) + 20px);
+  }
+
+  section.hero {
+    margin-top: 0;
+  }
+}

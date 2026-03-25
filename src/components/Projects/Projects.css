@@ -1,0 +1,162 @@
+/* Projects Section Styles */
+.projects-section {
+  padding: 3.5rem 0;
+}
+
+.projects-section h2 {
+  font-size: 1.9rem;
+  margin: 0 0 0.25rem;
+  text-align: center;
+  color: var(--text);
+}
+
+.projects-intro {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  text-align: center;
+  font-size: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.project-thumb {
+  height: 180px;
+  background: #0b0b0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.project-card:hover .project-thumb img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.project-title {
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.project-desc {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.6rem 0 0;
+}
+
+.tag {
+  font-size: 0.78rem;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  display: inline-block;
+}
+
+.project-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.6rem;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-list {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .project-thumb {
+    height: 200px;
+  }
+
+  .projects-section h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .projects-section {
+    padding: 2rem 0;
+  }
+
+  .project-card {
+    border-radius: 10px;
+  }
+
+  .project-thumb {
+    height: 150px;
+  }
+
+  .project-info {
+    padding: 0.9rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+  }
+}

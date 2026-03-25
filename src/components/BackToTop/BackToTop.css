@@ -1,0 +1,49 @@
+/* Back to Top Button Styles */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 26px;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--accent), #003366);
+  color: #fff;
+  border: none;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  z-index: 1400;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px) scale(0.98);
+  transition: opacity var(--transition-smooth), transform var(--transition-smooth), box-shadow var(--transition-fast);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.6);
+}
+
+.back-to-top:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .back-to-top {
+    right: 12px;
+    bottom: 18px;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+}

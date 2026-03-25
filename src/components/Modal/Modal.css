@@ -1,0 +1,242 @@
+/* Modal Styles */
+.info-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 3vh 2vw;
+  backdrop-filter: blur(4px);
+}
+
+.info-modal.visible {
+  display: flex;
+  animation: fadeIn 300ms ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.info-modal-panel {
+  width: min(880px, 96vw);
+  background: linear-gradient(180deg, #0f1114, #0b0d0f);
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+  position: relative;
+  animation: slideUp 300ms ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: var(--text);
+  transform: scale(1.1);
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.modal-head h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+.modal-tabs {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-btn {
+  background: transparent;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  font-weight: 600;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+}
+
+.tab-btn.active {
+  background: linear-gradient(90deg, var(--accent), #003366);
+  color: #fff;
+  border-color: transparent;
+}
+
+.modal-body {
+  padding-top: 6px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.tab-panel {
+  animation: fadeIn 200ms ease;
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+.lang-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.lang-list li {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 600;
+  text-align: center;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.lang-list li:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+.edu-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.edu-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.edu-item h4 {
+  margin: 0 0 0.5rem;
+  color: var(--accent-2);
+}
+
+.edu-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.project-list-modal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-list-modal li {
+  margin-bottom: 1rem;
+}
+
+.project-list-modal li:last-child {
+  margin-bottom: 0;
+}
+
+.modal-project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.modal-project-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(4px);
+}
+
+.modal-project-link::after {
+  content: '→';
+  margin-left: auto;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .info-modal-panel {
+    padding: 16px;
+  }
+
+  .modal-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .modal-tabs {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .lang-list {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .modal-body {
+    max-height: 70vh;
+  }
+}

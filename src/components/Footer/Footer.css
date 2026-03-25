@@ -1,0 +1,27 @@
+/* Footer Styles */
+.site-footer {
+  text-align: center;
+  font-size: medium;
+  font-weight: 300;
+  padding: 1.5rem 0;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, transparent, rgba(11, 15, 19, 0.5));
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 1rem 0;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
